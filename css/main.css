@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #f6f5f1;
+}
+
+/* styling header and hamburger */
+.heading{
+    top: 0;
+    position: fixed !important;
+    padding: 0 2%;
+    width: 100%;
+    min-height: 80px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    z-index: 999;
+}
+.logo{
+    overflow: hidden;
+    height: 60px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* hamburger icon designing */
+.closeHamburger{
+    display: none;
+}
+.openHamMenu{
+    display: initial;
+}
+.closeHamMenu{
+    display: none;
+
+}
+
+.hamBurger{
+    height: 40px;
+    width: 50px;
+    background-color: #4a7aad;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.hamCommon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    filter: invert(1);
+}
+/* navbar extra button styling  */
+.extraWhite{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: invert(1);
+}
+
+.aboutExtra{
+    height: 30px;
+    width: 30px;
+    padding: 2px;
+    position: relative;
+    background-color: #4a7aad;
+    border-radius: 2px;
+}
+.extraFlex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.minusCloseAbout{
+    display: none;
+}
+.minusOpen{
+    display: initial;
+}
+.extraCloseJs{
+    display: none;
+}
+.aboutMenu, .blogPostMenu{
+    position: relative;
+    opacity: 0;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+.aboutMenuOpen{
+    opacity: 1;
+    display: initial;
+}
+/* navbar styling  */
+.navBar{
+    margin-top: 80px;
+    top: -100%;
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+
+}
+.navBarOpen{
+    top: 0;
+}
+.navBar ul{
+    padding: 2% 2%;
+    list-style: none;
+    background-color: black;
+}
+.navBar ul li{
+    padding: 0.5% 0;
+    border-bottom: 1px solid white;
+
+}
+.navBar ul a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    letter-spacing: .4px;
+    font-size: 6.3vw;
+
+}
+.navBar .aboutMenu li, .navBar .blogPost ul li{
+    border-bottom: unset;
+    border-top: .1px solid white;
+}
+.navBar .blogPost ul li a , .navBar .aboutMenu li a{
+    border-bottom: 0.1px;
+}
+.navBar .blogPost, .about{
+    border-bottom: unset;
+
+}
+.navBar a:hover{
+    color: hsla(0, 39%, 72%, 0.907);
+}
+/* starting hero section  */
+.page1{
+    height: fit-content;
+margin-top: 20vh;
+background: url(/images/plane.png);
+background-repeat: repeat-x;
+background-position: bottom;
+/* background-size:contain; */
+}
+.heroImg{
+    display: none;
+}
+section{
+    padding-top: 8vh;
+}
+.heroSection p:nth-child(1){
+    font-family: "Poppins", sans-serif;
+    color: #764af1;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+.heroSection h1{
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14vw;
+    padding: 2%;
+    line-height: 16vw;
+    letter-spacing: -1px;
+
+}
+.heroSection h1 span{
+    color: red;
+
+}
+.heroSection p:nth-child(3){
+    margin-top: 6%;
+    font-family: "Poppins", sans-serif;
+    color: hsl(0, 0%, 26%);
+    padding: 0 1.5%;
+    font-size: 16px;
+    font-weight: 600;
+}
+/* button styling */
+.buttonSec{
+    width: 100%;
+    text-align: center;
+    padding: 25px 2%;
+}
+.heroSection button{
+    transition: all 0.2s ease-in-out;
+    background-color: #764af1;
+    width: 50%;
+    height: 60px;
+    border-radius: 15px;
+    border: 1px solid #764af1 ;
+}
+.heroSection button a{
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 450;
+text-decoration: none;
+color: #ffffff;
+}
+
+.heroSection button:hover{
+    background-color: white;
+
+}
+.heroSection button:hover a{
+    color: #764af1;
+}
+
+/* page2 styling start here  */
+.page2{
+    padding-top: 5%;
+}
+
+.card{
+    padding: 20px;
+    margin: auto;
+    width: 90%;
+    height: 80vh;
+    background-color: white;
+    box-shadow:  0px 30px 70px rgba(89, 86, 230, 0.1);
+    border-radius: 20px;
+    margin-bottom:30px;
+}
+.card img{
+  position: relative;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 20px;
+
+}
+.card h3{
+    font-family: poppins, sans-serif;
+    font-size: 175%;
+    font-weight: 600;
+    line-height: 10vw;
+    margin-bottom: 12%;
+
+}
+.card p{
+    margin-top: 8%;
+    font-size: 145%;
+    color: rgb(74, 75, 75);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.card:hover{
+    transform: scale(1.01);
+}
+
+/* page3 styling start here */
+.page3{
+    width: 100%;
+    padding-top: 10vh;
+    background-color: white;
+    padding-bottom: 15vh;
+}
+.page3 .feedbackSection{
+    padding: 0 10%;
+}
+.page3 .feedbackSection .feedbackText p{
+    text-align: center;
+    margin-bottom: 3vh;
+    color: #764af1;
+    font-family: poppins, sans-serif ;
+    font-weight: 600;
+   
+}
+.page3 .feedbackSection .feedbackText h3{
+    font-size: 7vw;   
+    line-height: 8vw;
+    text-transform: uppercase;
+    letter-spacing: -.5px;
+    font-family:  poppins, sans-serif;
+}
+
+/* video card styling start here */
+.feedbackVideo{
+    padding-top: 5vh;
+    width: 100%;
+    height: fit-content;
+    
+}
+.feedbackVideo .videoCard{
+    position: relative;
+    height: 400px;
+    width: 85%;
+    background: url("/images/student-01.png");
+    margin: 20px auto;
+    background-size: cover;
+    background-position:center ;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.infoAbsolute{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 5%;
+    z-index: 3;
+}
+.videoCard:hover{
+    transform: scale(1.03);
+}
+.infoAbsolute h2{
+    font-size: 7vw;
+    color: white;
+    font-weight: 400;
+    letter-spacing: -.5px;
+    font-family:  poppins, sans-serif;
+}
+.infoAbsolute p{
+    color: rgb(203, 203, 203);
+    font-size: 5.5vw;
+}
+
+.videoCard::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(hsla(0, 0%, 100%, 0.227), hsla(0, 0%, 0%, 0.83)) ;
+    position: absolute;
+
+}
+.videoCard::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background:linear-gradient( hsla(0, 0%, 100%, 0), hsla(279, 78%, 51%, 0.696)) ;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.videoCard:hover::after{
+    opacity: 1;
+}
+
+.playButton{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    border-radius: 50%;
+    background-color: #764af1;
+}
+.playButton a{
+    color: black;
+}
+.playButton a img{
+    filter: invert(1);
+    padding: 2%;
+    
+}
+
+.videoCard .infoAbsolute .country{
+    margin-top: 1px;
+    color: rgb(203, 203, 203);
+    font-size: 4.5vw;
+    letter-spacing: 1px;
+}
+/* page4 top destination section start here  */
+.page4{
+    height: fit-content;
+    width: 100%;
+    background-color: #f4f4f4;
+    padding-top: 5vh;
+}
+.destinationText h1{
+    text-align: center;
+    margin: 20px 0;
+
+    
+
+}
+.destinationText p{
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.countryCard{
+    height: 270px;
+    width: 80vw;
+    border-radius: 20px;
+   border: 1px solid  #e4b4b4;
+    text-align: center;
+    margin: auto;
+    box-shadow:  0px 30px 70px rgba(89, 86, 230, 0.1);
+    margin-bottom: 20px;
+}
+.countryCard img{
+    margin-top: 10%;
+   height: 50%;
+   border-radius: 50%;
+
+}
+.countryCard h2{
+    font-family: poppins, sans-serif;
+    margin-top: 8%;
+    text-transform: uppercase;
+    font-weight: 600;
+    
+}
+.countryCard:hover{
+    background-color: white;
+    transform: scale(1.01);
+}
+.mountain{
+    width: 100%;
+    background: url(/images/mountant.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 2vh;
+    margin-top: 20px;
+}
+.mountain img{
+    margin-bottom: 20px;
+}
+
+/* page5 step to get destination start here */
+.page5{
+    padding: 10vh 0 ;
+    width: 100%;
+    height: fit-content;
+    background-color: #faeaff;
+}
+.page5 p:nth-child(1){
+    text-align: center;
+    font-size: 7vw;
+    color: #5c20ff;
+}
+.page5 h1:nth-child(2){
+    text-align: center;
+    font-size: 10vw;
+    font-family: poppins, sans-serif;
+    line-height: 11vw;
+    margin-top: 10px;
+    font-weight: 500;
+   
+}
+.steps{
+    margin: auto;
+    margin-top: 10vh;
+    width: 80%;
+    height: 20vh;
+    text-align: center;
+}
+
+.img{
+    margin: 12px auto;
+    background-color: white;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.steps h3{
+    font-weight: 400;
+    font-family: poppins, sans-serif;
+    color: rgb(106, 106, 106);
+}
+
+/* footer section starts here  */
+.footer{
+    background-color: #173f6a;
+    color: white;
+    padding: 0 4%;
+padding-bottom: 5%;  
+  width: 100%;
+    
+}
+.footer h1{
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: underline;
+    padding: 5% 0;
+    margin: 3% 0;
+    font-family: poppins, sans-serif;
+    color: #b6b6b6;
+}
+.footer h2{
+    text-transform: capitalize;
+    padding-bottom: 1%;
+}
+.footer-left p{
+    color: #dfdfdf;
+    font-size: 5vw;
+    margin-bottom: 5%;
+}
+ /* footer social media section  */
+ .footer-right{
+    filter: invert(1);
+    margin-top: 10%;
+ }
+ .footer-right a{
+    text-decoration: none;
+ }
+ .footer .footer-right img{
+    height: 4.2vh;
+    cursor: pointer;
+    width: 10vw;
+    border-radius: 20%;
+    /* border: 1px solid rgb(0, 0, 0); */
+    margin: 0 .5%;
+ }
+ .footer-right img:hover{
+    filter: invert(1);
+ }
+.footer-bottom{
+    color: white;
+    width: 100%;
+    padding: 5% 0 !important;
+    margin: 0;
+    background-color: black;
+ }
+ .footer-bottom p{
+    text-align: center;
+    font-size: 70%;
+    font-family: poppins, sans-serif;
+ }
